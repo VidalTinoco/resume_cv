@@ -1,0 +1,166 @@
+---
+surname: Vidal Mendoza Tinoco
+address: "Ciencia Política - Coyoacán, Ciudad de México, México" # Subhead under name 
+### www: pagina de internet
+email: "vidalhum0@gmail.com"
+github: VidalTinoco
+### linkedin: 
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: TRUE
+docname: "Resume"
+headcolor:  414141 #08004f 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+source("make_detailed_section.R")
+```
+
+
+# Experiencia
+```{r}
+## To reflect promotions, simply change the "with" and "where" arguments to "" -
+## that'll keep everything grouped under the same header
+tepjfds_2023 <- vector("list")
+tepjfds_2023$Details <- c("Científico de Datos Jr.", "Septiembre 2023 - Hoy", "Tribunal Electoral del Poder Judicial de la Federación", "Coyoacán, Ciudad de México")
+tepjfds_2023$Bullets <- c(
+  "Extracción de datos mediante consultas SQL al Sistema de Información de la Secretaría General de Acuerdos (SISGA), para dar respuesta a solicitudes de información hechas vía el Portal Nacional de Transparencia.",
+  "Creación de paquetes de R para la sistematización y presentación de los datos extraídos del SISGA.",
+  "Colaboración en la creación de modelos de aprendizaje de máquina (Convolutional Neural Networks) con Keras y TensorFlow, para identificar datos escritos a mano en las actas del Instituto Nacional Electoral. Así, hacer más eficiente el proceso de impugnaciones y resoluciones en el proceso electoral del 2024."
+  
+  )
+
+
+sfads_2021 <- vector("list")
+sfads_2021$Details <- c("Científico de Datos", "Noviembre 2021 - Septiembre 2023", "Secretaría de Finanzas del Estado de Michoacán - Jefe de Departamento", "Morelia, Michoacán")
+sfads_2021$Bullets <- c(
+  "Con base en datos fiscales, y usando técnicas supervisadas de aprendizaje de máquina (lasso y ridge regression) construí un par de modelos para predecir tendencias en la recaudación fiscal (forecasting) y la estimación de multiplicadores fiscales (como el estrés fiscal). Así, monitoreamos la capacidad del gobierno estatal para cumplir con sus obligaciones financieras, resultando en la reestructuración de la deuda pública.",
+  "La reestructuración de la deuda ocasionó un ahorro de 540 millones de pesos al año, destinados a la inversión en diferentes programas sociales. Mediante métodos de aprendizaje de máquina no supervisado (K-means clustering) se orientó el gasto público a diversos sectores poblacionales para cumplir con el plan de gobierno estatal.",
+  "Estuve encargado de construir diversas bases de datos a partir de la extracción de texto de documentos físicos. Ello se realizó mediante un modelo supervisado de aprendizaje de máquina que clasifica el texto de acuerdo a su estructura y contenido. "
+  
+  )
+
+sfaprof_2023 <- vector("list")
+sfaprof_2023$Details <- c("Profesor de Análisis de Datos", "Mayo 2023 - Julio 2023", "Secretaría de Finanzas del Estado de Michoacán - Jefe de Departamento", "Morelia, Michoacán")
+sfaprof_2023$Bullets <- c(
+  "Diseño e impartición de un curso de análisis de datos con R para personal de la Secretaría de Finanzas del Estado de Michoacán. Entre los temas instruidos se encuentran la introducción al lenguaje R, manipulación de datos con Dplyr, visualización de datos con Ggplot2 y Plotly, además de la creación de reportes con RMarkdown."
+  )
+
+pubpol_2021 <- vector("list")
+pubpol_2021$Details <- c("Consultor de Políticas Públicas", "Diciembre 2021 - Junio 2022", "Ayuntamiento de Erongarícuaro - Consultor Externo", "Erongarícuaro, Michoacán (Híbrido)")
+pubpol_2021$Bullets <- c(
+  "Recolección de datos mediante encuestas y mesas de trabajo en el municipio de Erongarícuaro, Michoacán para identificar problemas de desarrollo a nivel municipal.",
+  "Mediante regresiones de series de tiempo que incluyeron variables dicotómicas por temporadas se estimó el comportamiento de diversos problemas sociales como la violencia y la disposición de agua potable durante el año.",
+  "Con base en los análisis propuestos se creó el plan de desarrollo municipal, donde se estructuran políticas públicas para prevenir y mitigar obstáculos para el bienestar social del municipio."
+  )
+
+# bda <- vector("list")
+# bda$Details <- c("Business Data Analyst", "Mayo 2020 - Enero 2022", "Herabes S.A. de C.V.", "Morelia, Michoacán (Remoto)")
+# bda$Bullets <- c(
+#   "Usando modelos supervisados de aprendizaje de máquina (diferentes tipos de regresiones) predecimos las ventas y consecuentemente estimamos la demanda de insumos durante la pandemia para ayudar a reducir la merma en los insumos de producción (forecasting). Resultando en un aumento del 13% en las utilidades mensuales respecto al semestre anterior y una reducción del 40% en la merma de insumos.",
+#   "Mediante la recolección y sistematización de datos propios (cantidad de clientes y comandas por dia) y constante alimentacion de datos de fuentes oficiales (datos de covid) creamos una base de datos para alimentar nuestros modelos. ")
+
+ra <- vector("list")
+ra$Details <- c("Asistente de Investigación", "Agosto 2019 - Mayo 2020", "Instituto Tecnológico Autónomo de México (ITAM)", "Álvaro Obregón, Ciudad de México")
+ra$Bullets <- c(
+  "Asistencia en el desarrollo de proyectos de investigación con el Dr. Eric Magar (ITAM).",
+  "Usando Git y GitHub creé y mantuve actualizadas diversas bases de datos correspondientes a investigaciones en temas de elección pública. Una de ellas sobre el cambio en las preferencias electorales en México.")
+
+
+make_detailed_section(
+  tepjfds_2023,
+  sfads_2021,
+  sfaprof_2023,
+  pubpol_2021,
+  ra)
+```
+
+# Educación
+
+```{r education}
+lic <- vector("list")
+lic$Details <- c("Licenciatura en Ciencia Política", 
+                       "Agosto 2017 - Julio 2021", 
+                       "Instituto Tecnológico Autónomo de México (ITAM)", 
+                       "Álvaro Obregón, Ciudad de México")
+lic$Bullets <- c(
+  "Tesina: Salpicaduras de Oro Verde. Efectos del boom aguacatero sobre la desigualdad salarial en Michoacán.",
+  "Cursos Relevantes: Econometria, inferencia causal, inferencia estadística, probabilidad, algebra (incluyendo algebra matricial), calculo diferencial e integral."
+)
+
+nd_harris <- vector("list")
+nd_harris$Details <- c("Programa Académico de Verano en Datos y Política Pública (DPSS por sus siglas en inglés)", 
+                       "Verano 2021", 
+                       "Harris School of Public Policy – University of Chicago", 
+                       "Chicago, Illinois")
+nd_harris$Bullets <- c(
+  "Proyecto de Investigación Final: Análisis Cuantitativo de las Protestas Originadas por el Asesinato de George Floyd en Estados Unidos.",
+  "Cursos Relevantes: Análisis de Datos para Políticas Públicas."
+)
+
+make_detailed_section(lic,
+                      nd_harris,
+                      order = 1:4)
+```
+
+\pagebreak
+
+# Proyectos
+
+```{r}
+tesina <- vector("list")
+tesina$Details <- c("Investigación - Salpicaduras de Oro Verde", "2022-2023", "Instituto Tecnológico Autónomo de México - Supervisada por Dra. Antonella Bandiera", "Remoto")
+tesina$Bullets <- c(
+  "Mi investigación trata sobre la manera en que el shock en la demanda de un producto como el aguacate afecta la desigualdad salarial en las zonas donde se cultiva. Para ello, utilicé datos de salarios formales de Michoacán para calcular el coeficiente de Gini por municipio desde 2003 hasta 2020. Comparé estos datos a través de un diseño de diferencias en diferencias (Diff in Diff), utilizando modelos de estudio de eventos (Event Study Model) y regresiones con efectos fijos (Two Way Fixed Effects).")
+
+# hegel <- vector("list")
+# hegel$Details <- c("Círculo de Lectura de Filosofía Política", "2021-2023","Extracurricular - Voluntario", "Remoto")
+# hegel$Bullets <- c(
+#   "Miembro y co-instructor (junto con el Dr. David Moreno Guinea del ITAM) de un círculo de lectura  extra curricular enfocado en Alexandre Kojève y Friedrich Hegel. Impartiendo las sesiones relacionadas al estudio de la obra de Jorge Luis Borges desde una perspectiva Hegeliana.")
+
+# sent <- vector("list")
+# sent$Details <- c("Investigación (Ciencia de Datos y Opinión Pública) - De Twitter a las Urnas", "2023","Extracurricular", "Remoto")
+# sent$Bullets <- c(
+#   "Actualmente realizo una investigación respecto a la predicción de resultados electorales mediante el análisis de sentimiento. El objetivo es averiguar si el estudio de la opinión pública con datos de Twitter pudo haber predicho los resultados electorales de la elección de 2023 a gobernador del Estado de México.")
+
+
+make_detailed_section(tesina)
+```
+
+
+
+
+# Habilidades
+```{r}
+# Additional Information
+TechnicalSkills <- vector("list")
+TechnicalSkills$Details <- c("Habilidades Técnicas", NA, "Lenguajes",NA)
+TechnicalSkills$Bullets <- c("R, RMarkdown, Python, SQL y Latex.")
+
+TechnicalSkills2 <- vector("list")
+TechnicalSkills2$Details <- c(NA, NA, "Paquetería",NA)
+TechnicalSkills2$Bullets <- c(
+  "Tidyverse, Dplyr, Ggplot2, Plotly, Caret, Pandas, Numpy, Keras y TensorFlow.")
+
+
+eng <- vector("list")
+eng$Details <- c("Idiomas", NA, "Inglés", NA)
+eng$Bullets <- c(
+  "Fluido | IELTS: 7.5")
+
+esp <- vector("list")
+esp$Details <- c(NA, NA, "Español", NA)
+esp$Bullets <- c(
+  "Nativo")
+
+
+make_detailed_section(TechnicalSkills,
+                      TechnicalSkills2,
+                      eng,
+                      esp)
+```
+
