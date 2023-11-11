@@ -28,7 +28,7 @@ source("make_detailed_section.R")
 tepjfds_2023 <- vector("list")
 tepjfds_2023$Details <- c("Científico de Datos Jr.", "Septiembre 2023 - Hoy", "Tribunal Electoral del Poder Judicial de la Federación", "Coyoacán, Ciudad de México")
 tepjfds_2023$Bullets <- c(
-  "Extracción de datos mediante consultas SQL al Sistema de Información de la Secretaría General de Acuerdos (SISGA), para dar respuesta a solicitudes de información hechas vía el Portal Nacional de Transparencia.",
+  "A cargo de la creación de una ShinyApp para facilitar la extracción de datos mediante consultas SQL al Sistema de Información de la Secretaría General de Acuerdos (SISGA), para dar respuesta a solicitudes de información hechas vía el Portal Nacional de Transparencia.",
   "Creación de paquetes de R para la sistematización y presentación de los datos extraídos del SISGA.",
   "Colaboración en la creación de modelos de aprendizaje de máquina (Convolutional Neural Networks) con Keras y TensorFlow, para identificar datos escritos a mano en las actas del Instituto Nacional Electoral. Así, hacer más eficiente el proceso de impugnaciones y resoluciones en el proceso electoral del 2024."
   
