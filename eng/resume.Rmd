@@ -1,0 +1,165 @@
+---
+surname: Vidal Mendoza Tinoco
+address: "Political Scientist – Coyoacán, Mexico City, Mexico" # Subhead under name 
+### www: pagina de internet
+email: "vidalhum0@gmail.com"
+github: VidalTinoco
+### linkedin: 
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: TRUE
+docname: "Resume"
+headcolor:  414141 #08004f 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+source("make_detailed_section.R")
+```
+
+
+# Working Experience
+```{r}
+## To reflect promotions, simply change the "with" and "where" arguments to "" -
+## that'll keep everything grouped under the same header
+tepjfds_2023 <- vector("list")
+tepjfds_2023$Details <- c("Jr Data Scientist", "September, 2023 – Today", "Mexico’S  Federal Judicial Power Election Tribunal (TEPJF in Spanish)", "Coyoacán, Mexico City")
+tepjfds_2023$Bullets <- c(
+  "In charge of creating a ShinyApp as well as R packages to ease data extraction using SQL queries  from the General Agreements Ministry’s Information System (SISGA in Spanish), in order to respond to requests for information made through the National Transparency Portal.",
+  "Collaboration in the creation of machine learning models (Convolutional Neural Networks) using Keras and TensorFlow, to identify handwritten data in the official records of the Mexican National Electoral Institute. This way, making the process of challenges and resolutions in the 2024 election process more efficient."
+  
+  )
+
+
+sfads_2021 <- vector("list")
+sfads_2021$Details <- c("Data Scientist", "November 2021 - September 2023", "State of Michoacán’s Finances Ministry – Department Head", "Morelia, Michoacán")
+sfads_2021$Bullets <- c(
+  "Based on tax information and using supervised machine learning techniques (lasso and ridge regression), I built a couple of models to predict trends in tax collection (forecasting) as well as estimating tax multipliers (such as fiscal stress). This way, we monitored the state’s government’s ability to meet its financial obligations, resulting in the restructuring of public debt.",
+  "Debt restructuring saved 540 million Mexican pesos a year, which were invested in several social programs. Public spending was directed to various sectors of the population to comply with the state government's plan using unsupervised machine learning methods (K‑means clustering).",
+  "I was in charge of building several databases by extracting text from physical documents. I did this using a supervised machine learning model that classifies the text according to its structure and content."
+  
+  )
+
+sfaprof_2023 <- vector("list")
+sfaprof_2023$Details <- c("Data Analysis Teacher", "May 2023 - July 2023", "State of Michoacán’s Finances Ministry – Department Head", "Morelia, Michoacán")
+sfaprof_2023$Bullets <- c(
+  "I designed and taught a data analysis course using R to the staff of the State of Michoacán’s Finances Ministry. Introduction to R programming language, manipulating data using Dplyr, data visualization using Ggplot2 and Plotly, are among the topics I taught, in addition to creating reports using RMarkdown."
+  )
+
+pubpol_2021 <- vector("list")
+pubpol_2021$Details <- c("Public Policy Consultant", "December 2021 - June 2022", "City Council of Erongarícuaro, in the State of Michoacán – External Consultant", "Erongarícuaro, Michoacán (Hybrid)")
+pubpol_2021$Bullets <- c(
+  "Data collection using surveys and discussion panels in the municipality of Erongarícuaro in the State of Michoacán to identify development issues at municipal level.",
+  "The behavior of several social issues such as violence and the availability of drinking water during the year were estimated using time series regressions that included seasonal dichotomous variables.",
+  "The municipal development plan was created based on the suggested analyses, where public policies are structured to prevent and relieve obstacles for the municipality’s social welfare."
+  )
+
+# bda <- vector("list")
+# bda$Details <- c("Business Data Analyst", "Mayo 2020 - Enero 2022", "Herabes S.A. de C.V.", "Morelia, Michoacán (Remoto)")
+# bda$Bullets <- c(
+#   "Usando modelos supervisados de aprendizaje de máquina (diferentes tipos de regresiones) predecimos las ventas y consecuentemente estimamos la demanda de insumos durante la pandemia para ayudar a reducir la merma en los insumos de producción (forecasting). Resultando en un aumento del 13% en las utilidades mensuales respecto al semestre anterior y una reducción del 40% en la merma de insumos.",
+#   "Mediante la recolección y sistematización de datos propios (cantidad de clientes y comandas por dia) y constante alimentacion de datos de fuentes oficiales (datos de covid) creamos una base de datos para alimentar nuestros modelos. ")
+
+ra <- vector("list")
+ra$Details <- c("Research Assistant", "August 2019 - May 2020", "Instituto Tecnológico Autónomo de México, ITAM (Mexican Autonomous Technological Institute)", "Álvaro Obregón, Ciudad de México")
+ra$Bullets <- c(
+  "Research assistant in the development of research projects by Dr. Eric Magar (ITAM).",
+  "I created and kept several databases updated using Git and GitHub. Such databases were related to research in the subject of public election. One of them was about the change in electoral preferences in Mexico.")
+
+
+make_detailed_section(
+  tepjfds_2023,
+  sfads_2021,
+  sfaprof_2023,
+  pubpol_2021,
+  ra)
+```
+
+# Schooling
+
+```{r education}
+lic <- vector("list")
+lic$Details <- c("Bachelor's Degree in Political Science", 
+                       "August 2017 - July 2021", 
+                       "Instituto Tecnológico Autónomo de México, ITAM (Mexican Autonomous Technological Institute)", 
+                       "Álvaro Obregón, Ciudad de México")
+lic$Bullets <- c(
+  "Dissertation: Green Gold Splashes. Effects of the Avocado Boom on Income Inequality in the State of Michoacán.",
+  "Relevant courses: econometrics, causal inference, statistical inference, probability, algebra (including matrix algebra), differential and integral calculus."
+)
+
+nd_harris <- vector("list")
+nd_harris$Details <- c("Data and Policy Summer Scholar Program (DPSS)", 
+                       "Summer 2021", 
+                       "Harris School of Public Policy – University of Chicago", 
+                       "Chicago, Illinois")
+nd_harris$Bullets <- c(
+  "Final Research Project:  Quantitative Analysis of the Protests That Were Causes by the Murder of George Floyd in the United States.",
+  "Relevant Courses: Data analysis for public policies."
+)
+
+make_detailed_section(lic,
+                      nd_harris,
+                      order = 1:4)
+```
+
+\pagebreak
+
+# Projects
+
+```{r}
+tesina <- vector("list")
+tesina$Details <- c("Research - Green Gold Splashes", "2022-2023", "Instituto Tecnológico Autónomo de México, ITAM (Mexican Autonomous Technological Institute) - Supervised by Dra. Antonella Bandiera", "Remote")
+tesina$Bullets <- c(
+  "My research is about the way that the shock on the demanding of a product such as avocado affects income inequality in the areas where it is grown. To do this, I used data from formal income in the state of Michoacán to calculate the Gini coefficient per municipality from 2003 to 2020. I compared these data through a difference in difference design (Diff in Diff), using Event Study Models and Two Way Fixed Effects.")
+
+# hegel <- vector("list")
+# hegel$Details <- c("Círculo de Lectura de Filosofía Política", "2021-2023","Extracurricular - Voluntario", "Remoto")
+# hegel$Bullets <- c(
+#   "Miembro y co-instructor (junto con el Dr. David Moreno Guinea del ITAM) de un círculo de lectura  extra curricular enfocado en Alexandre Kojève y Friedrich Hegel. Impartiendo las sesiones relacionadas al estudio de la obra de Jorge Luis Borges desde una perspectiva Hegeliana.")
+
+# sent <- vector("list")
+# sent$Details <- c("Investigación (Ciencia de Datos y Opinión Pública) - De Twitter a las Urnas", "2023","Extracurricular", "Remoto")
+# sent$Bullets <- c(
+#   "Actualmente realizo una investigación respecto a la predicción de resultados electorales mediante el análisis de sentimiento. El objetivo es averiguar si el estudio de la opinión pública con datos de Twitter pudo haber predicho los resultados electorales de la elección de 2023 a gobernador del Estado de México.")
+
+
+make_detailed_section(tesina)
+```
+
+
+
+
+# Skills
+```{r}
+# Additional Information
+TechnicalSkills <- vector("list")
+TechnicalSkills$Details <- c("Technical skills", NA, "Programming languages",NA)
+TechnicalSkills$Bullets <- c("R, RMarkdown, Python, SQL, Git/GitHub and Latex.")
+
+TechnicalSkills2 <- vector("list")
+TechnicalSkills2$Details <- c(NA, NA, "Packages",NA)
+TechnicalSkills2$Bullets <- c(
+  "Tidyverse, Dplyr, Ggplot2, Plotly, Caret, Pandas, Numpy, Keras and TensorFlow.")
+
+
+eng <- vector("list")
+eng$Details <- c("Languages", NA, "English", NA)
+eng$Bullets <- c(
+  "Fluent | IELTS: 7.5")
+
+esp <- vector("list")
+esp$Details <- c(NA, NA, "Spanish", NA)
+esp$Bullets <- c(
+  "Native speaker")
+
+
+make_detailed_section(TechnicalSkills,
+                      TechnicalSkills2,
+                      eng,
+                      esp)
+```
+
