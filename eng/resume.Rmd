@@ -26,10 +26,10 @@ source("make_detailed_section.R")
 ## To reflect promotions, simply change the "with" and "where" arguments to "" -
 ## that'll keep everything grouped under the same header
 tepjfds_2023 <- vector("list")
-tepjfds_2023$Details <- c("Jr Data Scientist", "September, 2023 – Today", "Mexico’s  Federal Judicial Power Election Tribunal (TEPJF in Spanish)", "Coyoacán, Mexico City")
+tepjfds_2023$Details <- c("Data Scientist", "September, 2023 – Today", "Mexico’s  Federal Judicial Power Election Tribunal (TEPJF in Spanish)", "Coyoacán, Mexico City")
 tepjfds_2023$Bullets <- c(
   "In charge of creating a ShinyApp as well as R packages to ease data extraction using SQL queries  from the General Agreements Ministry’s Information System (SISGA in Spanish), in order to respond to requests for information made through the National Transparency Portal.",
-  "Collaboration in the creation of machine learning models (Convolutional Neural Networks) using Keras and TensorFlow, to identify handwritten data in the official records of the Mexican National Electoral Institute. This way, making the process of challenges and resolutions in the 2024 election process more efficient."
+  "Leader of the team in charge of the creation of Large Language Models (LLM) with Keras and TensorFlow, to automate the classification and thematisation of cases received in the Superior Chamber of the TEPJF. Thus, making the process of challenges and resolutions in the 2024 electoral process more efficient."
   
   )
 
@@ -138,7 +138,7 @@ make_detailed_section(tesina)
 # Additional Information
 TechnicalSkills <- vector("list")
 TechnicalSkills$Details <- c("Technical skills", NA, "Programming languages",NA)
-TechnicalSkills$Bullets <- c("R, RMarkdown, Python, SQL, Git/GitHub and Latex.")
+TechnicalSkills$Bullets <- c("R, RMarkdown, Quarto, Python, SQL, Git/GitHub and Latex.")
 
 TechnicalSkills2 <- vector("list")
 TechnicalSkills2$Details <- c(NA, NA, "Packages",NA)
