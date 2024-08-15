@@ -26,7 +26,7 @@ source("make_detailed_section.R")
 ## To reflect promotions, simply change the "with" and "where" arguments to "" -
 ## that'll keep everything grouped under the same header
 tepjfds_2023 <- vector("list")
-tepjfds_2023$Details <- c("Científico de Datos", "Septiembre 2023 - Hoy", "Tribunal Electoral del Poder Judicial de la Federación (TEPJF)", "Coyoacán, Ciudad de México")
+tepjfds_2023$Details <- c("Científico de Datos", "Septiembre 2023 - Agosto 2024", "Tribunal Electoral del Poder Judicial de la Federación (TEPJF)", "Coyoacán, Ciudad de México")
 tepjfds_2023$Bullets <- c(
   "A cargo de la creación de una ShinyApp y paquetería de R para facilitar la extracción de datos mediante consultas SQL al Sistema de Información de la Secretaría General de Acuerdos (SISGA), a fin de dar respuesta a solicitudes de información hechas vía el Portal Nacional de Transparencia.",
   "Líder del equipo encargado de la creación de modelos lingüisticos de gran tamaño (Large Language Models - LLM) con Keras y TensorFlow, para automatizar la clasificación y tematización de expedientes recibidos en la Sala Superior del TEPJF. Así, hacer más eficiente el proceso de impugnaciones y resoluciones en el proceso electoral del 2024."
@@ -81,6 +81,17 @@ make_detailed_section(
 # Educación
 
 ```{r education}
+masters <- vector("list")
+masters$Details <- c("Maestría en Ciencia de Datos", 
+                       "Septiembre 2024 - Julio 2025", 
+                       "University of British Columbia (UBC)", 
+                       "Kelowna, British Columbia, Canadá")
+masters$Bullets <- c(
+  #"Tesina: Salpicaduras de Oro Verde. Efectos del boom aguacatero sobre la desigualdad salarial en Michoacán.",
+  "Cursos Relevantes: programación en la nube, inferencia bayesiana, modelado predictivo avanzado, aprendizaje supervisado, aprendizaje no-supervisado y semi-supervisado."
+)
+
+
 lic <- vector("list")
 lic$Details <- c("Licenciatura en Ciencia Política", 
                        "Agosto 2017 - Julio 2021", 
@@ -101,7 +112,8 @@ nd_harris$Bullets <- c(
   "Cursos Relevantes: Análisis de Datos para Políticas Públicas."
 )
 
-make_detailed_section(lic,
+make_detailed_section(masters,
+                      lic,
                       nd_harris,
                       order = 1:4)
 ```
